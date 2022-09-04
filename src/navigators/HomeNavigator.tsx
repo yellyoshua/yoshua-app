@@ -6,20 +6,23 @@ import {
 import {Screens} from '../enums';
 import {HomeScreen, UsersScreen} from '../screens';
 
-export type DashboardStackParamList = {
-  [Screens.DashboardScreen]: {};
+export type HomeStackParamList = {
+  [Screens.HomeScreen]: {};
   [Screens.UsersScreen]: {};
 };
 
-export type DashboardNavigationProps =
-  NativeStackNavigationProp<DashboardStackParamList>;
+export type HomeNavigationProps = NativeStackNavigationProp<HomeStackParamList>;
 
-const Stack = createNativeStackNavigator<DashboardStackParamList>();
+const Stack = createNativeStackNavigator<HomeStackParamList>();
 
-export const DashboardNavigator = () => {
+export const HomeNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name={Screens.DashboardScreen} component={HomeScreen} />
+      <Stack.Screen
+        name={Screens.HomeScreen}
+        component={HomeScreen}
+        options={{title: 'Home'}}
+      />
       <Stack.Screen name={Screens.UsersScreen} component={UsersScreen} />
     </Stack.Navigator>
   );

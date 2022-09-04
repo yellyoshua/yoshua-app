@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {RootNavigator} from './src/navigators';
+import {RootNavigator} from './src/navigators/RootNavigator';
 import {Provider} from 'react-redux';
 import generateStore from './src/store/store';
 
-const App = () => {
+export default function App() {
   const store = generateStore();
 
   return (
@@ -14,6 +14,4 @@ const App = () => {
       </NavigationContainer>
     </Provider>
   );
-};
-
-export default App;
+}

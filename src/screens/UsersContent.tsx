@@ -2,13 +2,13 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Screens} from '../enums';
-import {DashboardNavigationProps} from '../navigators';
+import {HomeNavigationProps} from '../navigators/HomeNavigator';
 
 export const UsersContent = () => {
-  const navigation = useNavigation<DashboardNavigationProps>();
+  const navigation = useNavigation<HomeNavigationProps>();
 
   const goToDashBoard = () => {
-    navigation.navigate(Screens.DashboardScreen, {});
+    navigation.navigate(Screens.HomeScreen, {});
   };
 
   return (

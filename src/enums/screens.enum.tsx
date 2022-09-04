@@ -1,5 +1,8 @@
 export enum Screens {
-  DashboardScreen = 'DashboardScreen',
+  HomeScreen = 'HomeScreen',
   UsersScreen = 'UsersScreen',
+}
+
+export enum PublicScreens {
   LoginScreen = 'LoginScreen',
 }

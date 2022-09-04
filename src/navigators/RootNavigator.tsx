@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {AuthNavigator} from './AuthNavigator';
-import {DashboardNavigator} from './DashboardNavigator';
+import {HomeNavigator} from './HomeNavigator';
 
 export const RootNavigator = () => {
   const [isLoggedIn] = useState(true);
@@ -9,5 +9,5 @@ export const RootNavigator = () => {
     return <AuthNavigator />;
   }
 
-  return <DashboardNavigator />;
+  return <HomeNavigator />;
 };

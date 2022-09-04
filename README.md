@@ -2,13 +2,13 @@
 
 This is a simple app that allows you with tools to help you with your daily life.
 
-[x]: [Tweet Daily](https://tweets.devenvironment.me)
+- [x] [Tweet Daily](https://tweets.devenvironment.me)
 
-[x]: [Periodic Table](https://tabla-periodica.vercel.app)
+- [x] [Periodic Table](https://tabla-periodica.vercel.app)
 
-[x]: [Globish Words](https://1500-globish-words.vercel.app)
+- [x] [Globish Words](https://1500-globish-words.vercel.app)
 
-[]: Url Shortener
+- [ ] Url Shortener
 
 ---
 

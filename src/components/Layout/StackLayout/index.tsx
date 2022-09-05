@@ -6,13 +6,17 @@ import {
   StatusBar,
   useColorScheme,
 } from 'react-native';
+import composeStyles from './styles';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {UsersContent} from '../UsersContent';
+interface PropTypes {
+  children: React.ReactNode;
+}
 
-export const UsersScreen = () => {
+export function StackLayout({children}: PropTypes) {
   const isDarkMode = useColorScheme() === 'dark';
   const navigator = useNavigation();
+
+  const styles = composeStyles({isDarkMode});
 
   useEffect(() => {
     navigator.setOptions({
@@ -20,18 +24,14 @@ export const UsersScreen = () => {
     });
   }, [navigator]);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.safeAreaView}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <UsersContent />
+        style={styles.scrollView}>
+        {children}
       </ScrollView>
     </SafeAreaView>
   );
-};
+}

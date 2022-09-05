@@ -1,10 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {Screens} from '../enums';
-import {HomeNavigationProps} from '../navigators/HomeNavigator';
+import {Screens} from '../../enums';
+import {HomeNavigationProps} from '../../navigators';
+import composeStyles from './styles';
 
 export const HomeContent = () => {
+  const styles = composeStyles();
   const navigation = useNavigation<HomeNavigationProps>();
 
   const goToUsersList = () => {
@@ -23,20 +25,3 @@ export const HomeContent = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    margin: 10,
-    padding: 10,
-    backgroundColor: '#ddd',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#aaa',
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});

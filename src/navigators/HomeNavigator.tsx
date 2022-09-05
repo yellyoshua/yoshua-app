@@ -23,7 +23,11 @@ export const HomeNavigator = () => {
         component={HomeScreen}
         options={{title: 'Home'}}
       />
-      <Stack.Screen name={Screens.UsersScreen} component={UsersScreen} />
+      <Stack.Screen
+        name={Screens.UsersScreen}
+        component={UsersScreen}
+        options={{title: 'Users'}}
+      />
     </Stack.Navigator>
   );
 };

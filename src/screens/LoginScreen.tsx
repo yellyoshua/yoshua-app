@@ -1,24 +1,15 @@
-import React, {useEffect} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   useColorScheme,
 } from 'react-native';
+import {LoginContent} from './LoginContent';
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {HomeContent} from '../HomeContent';
-
-export const HomeScreen = () => {
+export const LoginScreen = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const navigator = useNavigation();
-
-  useEffect(() => {
-    navigator.setOptions({
-      headerStyle: {flex: 1},
-    });
-  }, [navigator]);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -30,7 +21,8 @@ export const HomeScreen = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <HomeContent />
+        <Header />
+        <LoginContent />
       </ScrollView>
     </SafeAreaView>
   );

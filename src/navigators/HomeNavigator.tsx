@@ -17,11 +17,14 @@ const Stack = createNativeStackNavigator<HomeStackParamList>();
 
 export const HomeNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {backgroundColor: 'white'},
+      }}>
       <Stack.Screen
         name={Screens.HomeScreen}
         component={HomeScreen}
-        options={{title: 'Home'}}
+        options={{title: 'Yoshua'}}
       />
       <Stack.Screen
         name={Screens.UsersScreen}
